@@ -1,7 +1,7 @@
 FROM centos:7
 
 RUN yum groupinstall -y "Development tools" && \
-    yum install -y git zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel && \
+    yum install -y libyaml-devel git zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel && \
     curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash && \
     echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.profile && \
     echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.profile && \
